@@ -1,16 +1,20 @@
+/* @import url('https://fonts.googleapis.com/css2? family= Dancing+Script & family= Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300; 1 500 ; 1 700 & display=swap'); */
+
+
 body{
-    min-height: 100vh;
-    /* margin: 0; */
+    margin: 0;
+    padding: 0 10px;
+    height: 100vh;
     display: flex  ;
-    border: 1px solid red;
-    /* overflow: hidden;  */
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
-/* html{
-    padding: 0;
-    margin: 0;
-    width: 100%;
-} */
+html{
+    max-width: 100vw;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+   
+}
 
 header{
     display: flex;
@@ -19,13 +23,49 @@ header{
 
 h1{
     text-align: center;
+    font-family: 'roboto', sans-serif;
+    margin-left: 350px;
+}
+
+h2{
+    font-family: 'roboto', sans-serif;
 }
 
 header button{
-    padding: 5px 10px;
+    /* padding: 5px 30px;
     margin: 20px 10px;
-    border-radius: 5px;
+    border-radius: 5px; */
+   
+        min-width: 130px;
+        height: 40px;
+        color: #fff;
+        padding: 5px 10px;
+        margin-top: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px;
+        border: none;
+        box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+        background: #a3a7ab;
+       z-index: 1;
 }
+
+header button:hover{
+
+    background-color: #701919;
+    cursor: pointer;
+    width: 100%;
+    left: 0;}
+
+    
+      header button:active {
+        top: 2px;
+      }
+
 
 
 
@@ -45,10 +85,11 @@ header button{
 /* ********************************************** CLASSES ****************************** */
 
 .container{
-    border: 1px solid black;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr ;
+   
    
     /* flex-direction: column;
     justify-content: space-evenly; */
@@ -56,20 +97,68 @@ header button{
 }
 
 
+
 .motCacher{
     margin-left: 30px;
     font-size: 50px;
+    /* border: 1px solid rgb(147, 140, 140);
+    border-radius: 5px;
+    box-shadow: 1px 6px 10px 1px rgba(0,0,0,0.75);
+    padding: 10px;
+    text-align: center; */
+
+
 }
 .keyboard{
-    border: 1px blue solid;
     text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-  
+    margin: 0 auto;
+    padding: 15px;
+    border : 1px solid rgb(147, 140, 140);
+    border-radius: 5px;
+    box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.75);
 }
 .keyboard button{
+    padding: 15px;
+    margin: 5px 15px; 
+    /* border-radius: 5px; */
+    /* border: none; */
+    /* box-shadow:  1px 5px 10px 1px rgba(0,0,0,0.75); */
+    font-family: 'dancing script', cursive; 
+    /* cursor: pointer; */
+    box-shadow:inset 1px 1px 5px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#ededed;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#777777;
+	font-size:15px;
+	font-weight:bold;
+	/* padding:6px 24px; */
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+
+.keyboard button:hover {
+    background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color:#dfdfdf;
+}
+
+.keyboard button:active {
+    position:relative;
+    top:1px;
+}
+
+#verifier{
     padding: 10px;
-    margin: 5px 10px;    
+    margin: 5px 135px 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.75);
+    font-family: 'dancing script', cursive; 
+    cursor: pointer;
+    font-size: 16px;
 }
 
 /* *********************** FOOTER *********************************** */
