@@ -35,6 +35,7 @@ const motsPendu = [
   "CONCOMBRE",
   "RADIS",
 ];
+let body = document.querySelector("body");
 let resteElement = document.querySelector("h2");
 let imagePendu = document.querySelector(".images");
 let h1 = document.querySelector("h1");
@@ -83,7 +84,6 @@ let imagePendu5 = document.querySelector(".images");
 let imagePendu6 = document.querySelector(".images");
 let imagePendu7 = document.querySelector(".images");
 let imageWin = document.querySelector(".images");
-let marguerite = document.querySelector("#marguerite");
 
 boutonsClavier.forEach(function (button) {
   button.addEventListener("click", function () {
@@ -99,7 +99,7 @@ boutonsClavier.forEach(function (button) {
         }
       });
     } else {
-      //********* mauvaise lettre trouvé par le joueur (on desactive le bouton pour ne pas pouvoir cliquer dessus une deuxieme fois (on change la couleur du bouton)
+      //********* mauvaise lettre  (on desactive le bouton pour ne pas pouvoir cliquer dessus une deuxieme fois (on change la couleur du bouton)
       button.disabled = true;
       button.style.backgroundColor = "gray";
       resteElement.textContent = reste;
@@ -110,7 +110,7 @@ boutonsClavier.forEach(function (button) {
         imagePendu1.style.backgroundImage = "url('images/marguerite1.png')";
         imagePendu1.style.backgroundRepeat = "no-repeat";
         imagePendu1.style.backgroundSize = "cover";
-        imagePendu1.style.transition = "all 1s";
+        imagePendu1.style.transition = "all 2s";
         imagePendu1.style.backgroundPosition = "center";
         resteElement.textContent = "il vous reste " + reste + " essais";
       } else if (reste == 4) {
@@ -130,6 +130,7 @@ boutonsClavier.forEach(function (button) {
         imagePendu4.style.backgroundRepeat = "no-repeat";
         imagePendu4.style.backgroundSize = "cover";
         imagePendu4.style.transition = "all 1s";
+
         resteElement.textContent = "il vous reste " + reste + " essais";
       } else if (reste == 1) {
         imagePendu5.style.backgroundImage = "url('images/marguerite5.png')";
@@ -153,12 +154,6 @@ boutonsClavier.forEach(function (button) {
           resteElement.textContent = "Dommage !";
         });
       }
-
-      //   else if (reste == -1) {
-      //     confirm("Le mot est " + motADeviner + " Voulez-vous rejouer ?")
-      //       ? location.reload()
-      //       : alert("Bye !");
-      //   }
     }
 
     // ************************* Check si le joueur a gagné (si il ne reste plus de _ dans le mot caché).
@@ -172,40 +167,61 @@ boutonsClavier.forEach(function (button) {
       }
     }
     if (gagne) {
-      h1.textContent = "Vous avez gagné !";
-      boutonsClavier.forEach((button) => {
-        button.disabled = true;
-      });
+      (h1.textContent = "Vous avez gagné !"),
+        boutonsClavier.forEach((button) => {
+          button.disabled = true;
+        });
       boutonsClavier.disabled = true;
       h1.style.color = "#186F65";
-      imageWin.style.backgroundImage = "url('images/penduWin.png')";
-      imageWin.style.backgroundPosition = "center";
-      //   imageWin.style.transition = "all 2s";
-      imageWin.style.backgroundSize = "55%";
-      imageWin.style.backgroundRepeat = "no-repeat";
-      imageWin.style.backgroundSize = "cover";
+      body.style.backgroundImage = "url('images/penduWin.png')";
+      body.style.backgroundPosition = "center";
+      body.style.backgroundSize = "50px";
+      body.style.backgroundRepeat = "no-repeat";
+      body.style.backgroundSize = "cover";
+      body.style.transition = "all 2s";
+      resteElement.textContent = "Bravo !";
     }
 
-    // *************************** Proposer un mot au joueur et verifier si le mot proposé est le bon.
+    // *************************** Vérifier si le mot proposé est le bon.
 
     let verifier = document.querySelector("#verifier");
+
     verifier.addEventListener("click", function () {
-      if (prompt("Entrez un mot").toUpperCase() == motADeviner) {
+      let motDevine =
+        prompt("Entrez un mot").toUpperCase() || motADeviner.toUpperCase();
+      if (motDevine === motADeviner.toUpperCase()) {
         h1.textContent = "Vous avez gagné !";
         verifier.disabled = true;
         verifier.style.backgroundColor = "gray";
         h1.style.color = "#186F65";
-        imageWin.style.backgroundImage = "url('images/penduWin.png')";
-        imageWin.style.backgroundSize = "cover";
-        imageWin.style.backgroundPosition = "center";
-        imageWin.style.transition = "all 2s";
+        body.style.backgroundImage = "url('images/penduWin.png')";
+        body.style.backgroundSize = "cover";
+        body.style.backgroundPosition = "center";
+        body.style.transition = "all 2s";
+        imagePendu1,
+          imagePendu2,
+          imagePendu3,
+          imagePendu4,
+          imagePendu5,
+          imagePendu6,
+          (imagePendu7.style = "display:none");
       } else {
         h1.textContent = "Vous avez perdu !";
         verifier.disabled = true;
         verifier.style.backgroundColor = "gray";
         h1.style.color = "#FA7070";
-        imagePendu7.style.backgroundImage = "url('images/marguerite8.png')";
-        imagePendu7.style.transition = "all 1s";
+        imagePendu1,
+          imagePendu2,
+          imagePendu3,
+          imagePendu4,
+          imagePendu5,
+          imagePendu6,
+          (imagePendu7.style = "display:none");
+        body.style.backgroundImage = "url('images/marguerite8.png')";
+        body.style.backgroundPosition = "center";
+        body.style.backgroundSize = "cover";
+
+        body.style.transition = "all 1s";
         resteElement.textContent = "Dommage !";
       }
     });
