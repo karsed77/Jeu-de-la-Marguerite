@@ -108,9 +108,26 @@ header button:active {
     font-size: 50px;
 }
 
+.mot{
+    text-align: center;
+    padding-top: 20px;
+    align-self: center;
+}
+
+.motTrouver{
+    font-weight: bold;
+    text-align: right;
+    padding-top: 20px;
+    align-self: center;
+    font-size: 50px;
+    color:rgb(30, 139, 30);
+    text-shadow: 1px 4px 5px black;
+
+}
+
+
 
 .images{
-    /* background-repeat : no-repeat; */
     background-size : cover; 
     background-position: center;
     transition : all 1s ;

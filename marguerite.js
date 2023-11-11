@@ -46,7 +46,6 @@ const boutonRestart = document.querySelector(".rejouer button ");
 const boutonsClavier = document.querySelectorAll(".keyboard button");
 const btnLettres = document.querySelectorAll(".lettre");
 const verifier = document.querySelector("#faireProposition");
-// const imageWin = document.querySelector("#imageWin");
 
 let resteVie = 7;
 const totalvie = 7;
@@ -128,12 +127,13 @@ function proposerMot() {
 
 function afficherStatut(message, color) {
   h1.textContent = message;
-
   h1.style.color = color;
 }
 
 function afficherMessageWin() {
   afficherStatut("Vous avez gagné", "green");
+  vieRestantes.style.display = "none";
+  motCacher.classList.add("motTrouver");
 }
 
 function afficherMessageLose() {
