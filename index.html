@@ -12,22 +12,21 @@
     
     <div id="container">
     <header>
-    <h1>Le jeu de la marguerite</h1>
-        <section class="rejouer">
-        <button>Rejouer</button>
-        </section>
+        <h1>Le jeu de la marguerite</h1>
+        <span class="rejouer">
+            <button>Rejouer</button>
+        </span>
     </header>
-
-        <div class="container">
-        <div class="mot">
-            <h2 class="reste"> </h2>
-            <span class="motCacher"> </span>
-        </div>
-        <div class="images"> </div>
-       </div>
+<main>
+        <section class="container">
+            <div class="mot">
+                <h2 class="reste"> </h2>
+                <div class="motCacher"> </div>
+            </div>
+            <div class="images" > </div>
+       </section>
        
-        <div class="keyboard">
-           
+        <section class="keyboard">           
                 <button class="lettre" data-letter>A</button>
                 <button class="lettre" data-letter>Z</button>
                 <button class="lettre" data-letter>E</button>
@@ -54,15 +53,17 @@
                 <button class="lettre" data-letter>V</button>
                 <button class="lettre" data-letter>B</button>
                 <button class="lettre" data-letter>N</button>
-            </div>
-
-            <button id="verifier" >Tu as deviné le mot ?</button>
+            </section>
+    <footer class="flex-center">
+        <button id="faireProposition" >Proposer un mot</button>
+    </footer>
+            
            
-
+</main>
 <footer>
 © Karim Seddiri - 2023
 </footer>
 </div>
-<script src="script.js"></script>
+<script src="marguerite.js"></script>
 </body>
 </html>
