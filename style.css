@@ -89,7 +89,7 @@ header button:active {
     border-radius: 5px;
     border: none;
     box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.75);
-    font-family: 'dancing script', cursive; 
+    font-family: 'dancing script', Arial, Helvetica, sans-serif;
     cursor: pointer;
     font-size: 16px;
 }
@@ -116,7 +116,7 @@ header button:active {
 
 .motTrouver{
     font-weight: bold;
-    text-align: right;
+    text-align: center;
     padding-top: 20px;
     align-self: center;
     font-size: 50px;
@@ -131,6 +131,7 @@ header button:active {
     background-size : cover; 
     background-position: center;
     transition : all 1s ;
+    height: 110%;
 }
 
 
@@ -154,7 +155,7 @@ header button:active {
 .keyboard button{
     padding: 15px;
     margin: 5px 15px; 
-    font-family: 'dancing script', cursive; 
+    font-family: 'dancing script', Arial, Helvetica, sans-serif; 
      box-shadow:inset 1px 1px 5px 0px #ffffff;
 	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
 	background-color:#ededed;
@@ -165,7 +166,6 @@ header button:active {
 	color:#777777;
 	font-size:15px;
 	font-weight:bold;
-	/* padding:6px 24px; */
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;
 }

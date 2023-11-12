@@ -66,7 +66,6 @@ function genererNombreAleatoire(max) {
 }
 
 function genererMot() {
-  // on génère un nombre aléatoire
   while (nombreAleatoire == dernierNombreAleatoire) {
     nombreAleatoire = genererNombreAleatoire(motsPendu.length);
   }
@@ -91,12 +90,10 @@ function creerMotCache() {
 }
 
 function afficheVie() {
-  // on affiche le nombre de vie restante
   vieRestantes.textContent = "il vous reste " + resteVie + " essais";
 }
 
 function afficheImageMarguerite() {
-  // on affiche l'image correspondant au nombre de vie restante
   const indexImage = totalvie - resteVie;
   imageMarguerite.style.backgroundImage = `url("images/marguerite${indexImage}.png")`;
 }
@@ -131,13 +128,13 @@ function afficherStatut(message, color) {
 }
 
 function afficherMessageWin() {
-  afficherStatut("Vous avez gagné", "green");
+  afficherStatut("Vous avez gagné !", "green");
   vieRestantes.style.display = "none";
   motCacher.classList.add("motTrouver");
 }
 
 function afficherMessageLose() {
-  afficherStatut("Vous avez perdu", "red");
+  afficherStatut("Vous avez perdu !", "red");
 }
 
 function afficherImageWin() {
@@ -189,6 +186,7 @@ function initalisationApp() {
         // mauvaise lettre trouvé par le joueur (on affiche l'image) et on enlève une vie
         resteVie--;
         bouton.disabled = true;
+        verifier.disabled = true;
         afficheVie();
         afficheImageMarguerite();
         if (resteVie === 0) {
