@@ -16,8 +16,6 @@ body{
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
 }
 
-
-
 header{
     display: flex;
     justify-content: space-between;
@@ -125,15 +123,12 @@ header button:active {
 
 }
 
-
-
 .images{
     background-size : cover; 
     background-position: center;
     transition : all 1s ;
     height: 110%;
 }
-
 
 .gameWin {
     background-image: url('images/gameWin.png');
@@ -142,7 +137,6 @@ header button:active {
     background-position: center;
     transition: all 2s;
   }
-
 
 .keyboard{
     text-align: center;
@@ -181,17 +175,10 @@ header button:active {
     background: none; 
 }
 
-
-
-
-
 /* *********************** FOOTER *********************************** */
-
-
 footer{
     display: flex; 
 }
-
 .flex-center {
   align-items: center;
   justify-content: center;
